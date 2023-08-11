@@ -1,10 +1,10 @@
 <footer class="footer">
-  <div class="container-fluid">
-    <nav class="float-left">
+    <div class="container-fluid">
+        {{-- <nav class="float-left">
       <ul>
         <li>
           <a href="https://www.creative-tim.com">
-              {{ __('Creative Tim') }}
+              {{ __('TARE') }}
           </a>
         </li>
         <li>
@@ -23,13 +23,13 @@
           </a>
         </li>
       </ul>
-    </nav>
-    <div class="copyright float-right">
-      &copy;
-      <script>
-        document.write(new Date().getFullYear())
-      </script>, made with <i class="material-icons">favorite</i> by
-      <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
+    </nav> --}}
+        <div class="copyright float-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>, TODOS LOS DERECTOS <i class="material-icons">favorite</i>
+            <a href="https://www.aaarealestate.com.co" target="_blank">TARE</a>
+        </div>
     </div>
-  </div>
 </footer>

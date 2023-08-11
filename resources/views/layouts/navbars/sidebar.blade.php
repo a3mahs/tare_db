@@ -5,8 +5,8 @@
       Tip 2: you can also add an image using data-image tag
   -->
   <div class="logo">
-    <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+    <a href="https://www.aaarealestate.com.co" class="simple-text logo-normal">
+      {{ __('TARE') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -18,7 +18,7 @@
         </a>
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
-        <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+        {{-- <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i><img style="width:25px" src="{{ asset('img/laravel.svg') }}"></i>
           <p>{{ __('Laravel Examples') }}
             <b class="caret"></b>
@@ -40,7 +40,7 @@
             </li>
           </ul>
         </div>
-      </li>
+      </li> --}}
       @can('user_index')
       <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('users.index') }}">
@@ -73,7 +73,7 @@
         </a>
       </li>
       @endcan
-      <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
+      {{-- <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
         <a class="nav-link" href="#">
           <i class="material-icons">notifications</i>
           <p>{{ __('Notifications') }}</p>
@@ -84,7 +84,7 @@
           <i class="material-icons">language</i>
           <p>{{ __('RTL Support') }}</p>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </div>
 </div>
