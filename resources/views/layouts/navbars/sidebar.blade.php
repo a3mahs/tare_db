@@ -14,7 +14,7 @@
       <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('home') }}">
           <i class="material-icons">dashboard</i>
-            <p>{{ __('Dashboard') }}</p>
+            <p>{{ __('Bienvenidos') }}</p>
         </a>
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
@@ -49,6 +49,17 @@
         </a>
       </li>
       @endcan
+      {{--PROPIEDAD--}}
+      @can('propiedad_index')
+      <li class="nav-item{{ $activePage == 'propiedads' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('propiedads.index') }}">
+          <i class="material-icons">library_books</i>
+            <p>{{ __('Propiedades') }}</p>
+        </a>
+      </li>
+      @endcan
+
+      {{--  --}}
       @can('post_index')
       <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('posts.index') }}">

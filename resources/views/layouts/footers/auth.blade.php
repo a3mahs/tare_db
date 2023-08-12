@@ -28,7 +28,7 @@
             &copy;
             <script>
                 document.write(new Date().getFullYear())
-            </script>, TODOS LOS DERECTOS <i class="material-icons">favorite</i>
+            </script>, TODOS LOS DERECTOS -
             <a href="https://www.aaarealestate.com.co" target="_blank">TARE</a>
         </div>
     </div>

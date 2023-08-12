@@ -41,6 +41,13 @@ class PermissionSeeder extends Seeder
             'post_show',
             'post_edit',
             'post_destroy',
+            // 
+            'propiedad_index',
+            'propiedad_create',
+            'propiedad_show',
+            'propiedad_edit',
+            'propiedad_destroy',
+            // 
         ];
 
         foreach ($permissions as $permission) {
