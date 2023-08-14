@@ -14,7 +14,7 @@ class CreateInmueblesTable extends Migration
     public function up()
     {
         Schema::create('inmuebles', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('categoria_inmueble');
             $table->timestamps();
         });

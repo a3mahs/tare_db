@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Propiedad;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use App\Models\Inmueble;
 
 class PropiedadController extends Controller
 {
@@ -18,7 +19,8 @@ class PropiedadController extends Controller
         abort_if(Gate::denies('propiedad_index'), 403);
 
         $propiedads = Propiedad::paginate(5);
-        return view('propiedads.index', compact('propiedads'));
+        $inmuebles = Inmueble::All('categoria_inmueble');
+        return view('propiedads.index', compact('propiedads', 'inmuebles'));
     }
 
     /**
@@ -30,7 +32,9 @@ class PropiedadController extends Controller
     {
         abort_if(Gate::denies('propiedad_create'), 403);
 
-        return view('propiedads.create');
+        $inmuebles = Inmueble::All('id', 'categoria_inmueble');
+
+        return view('propiedads.create', compact('inmuebles'));
     }
 
     /**
@@ -55,8 +59,9 @@ class PropiedadController extends Controller
     public function show(Propiedad $propiedad)
     {
         abort_if(Gate::denies('propiedad_show'), 403);
+        $inmuebles = Inmueble::All('id', 'categoria_inmueble');
 
-        return view('propiedads.show', compact('propiedad'));
+        return view('propiedads.show', compact('propiedad', 'inmuebles'));
     }
 
     /**
@@ -68,8 +73,9 @@ class PropiedadController extends Controller
     public function edit(Propiedad $propiedad)
     {
         abort_if(Gate::denies('propiedad_edit'), 403);
+        $inmuebles = Inmueble::All('id', 'categoria_inmueble');
 
-        return view('propiedads.edit', compact('propiedad'));
+        return view('propiedads.edit', compact('propiedad', 'inmuebles'));
     }
 
     /**

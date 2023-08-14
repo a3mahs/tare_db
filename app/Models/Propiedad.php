@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Inmueble;
 
 class Propiedad extends Model
 {
@@ -28,4 +29,9 @@ class Propiedad extends Model
         'nota',
         'observacion'
     ];
+
+    public function Inmueble()
+    {
+      return $this->belongsTo(Inmueble::class, 'categoria');
+    }
 }

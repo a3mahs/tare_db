@@ -14,10 +14,10 @@ class CreatePropiedadsTable extends Migration
     public function up()
     {
         Schema::create('propiedads', function (Blueprint $table) {
-            $table->id();
-            $table->string('categoria');
+            $table->bigIncrements('id');
+            $table->bigInteger('categoria')->unsigned();;
             $table->string('construccion');
-            $table->string('estado');
+            $table->bigInteger('estado')->unsigned();;
             $table->string('direccion');
             $table->string('estrato');
             $table->string('barrio');
@@ -25,7 +25,7 @@ class CreatePropiedadsTable extends Migration
             $table->string('valor');
             $table->string('contactos');
             $table->string('propietario');
-            $table->string('tipo_documento');
+            $table->bigInteger('tipo_documento')->unsigned();;
             $table->string('documento');
             $table->string('contactos_propietario');
             $table->string('direccion_propietario');
@@ -33,6 +33,10 @@ class CreatePropiedadsTable extends Migration
             $table->string('nota');
             $table->string('observacion');
             $table->timestamps();
+
+            // $table->foreign('categoria')->references('id')->on('inmuebles');
+            // $table->foreign('estado')->references('id')->on('estados');
+            // $table->foreign('tipo_documento')->references('id')->on('documentos');
         });
     }
 

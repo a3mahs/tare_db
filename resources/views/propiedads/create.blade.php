@@ -20,10 +20,28 @@
                                     <div class="container">
                                         <div class="row">
                                             {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
-                                            <div class="col-sm">
+                                            {{-- <div class="col-sm">
                                                 <input type="text" class="form-control" name="categoria"
                                                     placeholder="Categoria" autocomplete="off" autofocus>
-                                            </div>
+                                            </div> --}}
+                                                <div class="col-sm">
+                                                    <select class="form-control" name="categoria">
+                                                        <option value="">Seleccione la categoria</option>
+                                                        @foreach ($inmuebles as $inmueble)
+                                                          @if($inmueble['id'] == old('categoria') )
+                                                            <option value="{{ $inmueble['id'] }}" selected>{{ $inmueble['categoria_inmueble'] }}</option>
+                                                          @else
+                                                            <option value="{{ $inmueble['id'] }}">{{ $inmueble['categoria_inmueble'] }}</option>
+                                                          @endif  
+                                                        @endforeach
+                                                    </select>
+            
+                                                    @if ($errors->has('categoria'))
+                                                      <span class="error text-danger" for="input-categoria">{{ $errors->first('categoria') }}</span>
+                                                    @endif
+                                                </div>
+            
+                                            {{--  --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="construccion"
                                                     placeholder="Año" autocomplete="off" autofocus>
