@@ -48,6 +48,17 @@ class PermissionSeeder extends Seeder
             'propiedad_edit',
             'propiedad_destroy',
             // 
+            'inmueble_index',
+            'inmueble_create',
+            'inmueble_show',
+            'inmueble_edit',
+            'inmueble_destroy',
+            //
+            'estado_index',
+            'estado_create',
+            'estado_show',
+            'estado_edit',
+            'estado_destroy', 
         ];
 
         foreach ($permissions as $permission) {

@@ -58,6 +58,24 @@
         </a>
       </li>
       @endcan
+      {{-- CATEGORIA INMUEBLE --}}
+      @can('inmueble_index')
+      <li class="nav-item{{ $activePage == 'inmuebles' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('inmuebles.index') }}">
+          <i class="material-icons">library_books</i>
+            <p>{{ __('Categoria Inmueble') }}</p>
+        </a>
+      </li>
+      @endcan
+        {{-- ESTADO PROPIEDAD --}}
+      @can('estado_index')
+      <li class="nav-item{{ $activePage == 'estados' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('estados.index') }}">
+          <i class="material-icons">library_books</i>
+            <p>{{ __('Estado Propiedad') }}</p>
+        </a>
+      </li>
+      @endcan
 
       {{--  --}}
       @can('post_index')
@@ -72,7 +90,7 @@
       <li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('permissions.index') }}">
           <i class="material-icons">bubble_chart</i>
-          <p>{{ __('Permissions') }}</p>
+          <p>{{ __('Permisos') }}</p>
         </a>
       </li>
       @endcan

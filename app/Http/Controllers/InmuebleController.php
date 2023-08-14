@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Propiedad;
+use App\Models\Inmueble;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
-class PropiedadController extends Controller
+class InmuebleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,10 @@ class PropiedadController extends Controller
      */
     public function index()
     {
-        abort_if(Gate::denies('propiedad_index'), 403);
+        abort_if(Gate::denies('inmueble_index'), 403);
 
-        $propiedads = Propiedad::paginate(5);
-        return view('propiedads.index', compact('propiedads'));
+        $inmuebles = Inmueble::paginate(5);
+        return view('inmuebles.index', compact('inmuebles'));
     }
 
     /**
@@ -28,9 +28,9 @@ class PropiedadController extends Controller
      */
     public function create()
     {
-        abort_if(Gate::denies('propiedad_create'), 403);
+        abort_if(Gate::denies('inmueble_create'), 403);
 
-        return view('propiedads.create');
+        return view('inmuebles.create');
     }
 
     /**
@@ -41,9 +41,9 @@ class PropiedadController extends Controller
      */
     public function store(Request $request)
     {
-        Propiedad::create($request->all());
+        Inmueble::create($request->all());
 
-        return redirect()->route('propiedads.index');
+        return redirect()->route('inmuebles.index');
     }
 
     /**
@@ -52,11 +52,11 @@ class PropiedadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Propiedad $propiedad)
+    public function show(Inmueble $inmueble)
     {
-        abort_if(Gate::denies('propiedad_show'), 403);
+        abort_if(Gate::denies('inmueble_show'), 403);
 
-        return view('propiedads.show', compact('propiedad'));
+        return view('inmuebles.show', compact('inmueble'));
     }
 
     /**
@@ -65,11 +65,11 @@ class PropiedadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Propiedad $propiedad)
+    public function edit(Inmueble $inmueble)
     {
-        abort_if(Gate::denies('propiedad_edit'), 403);
+        abort_if(Gate::denies('inmueble_edit'), 403);
 
-        return view('propiedads.edit', compact('propiedad'));
+        return view('inmuebles.edit', compact('inmueble'));
     }
 
     /**
@@ -79,11 +79,11 @@ class PropiedadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Propiedad $propiedad)
+    public function update(Request $request, Inmueble $inmueble)
     {
-        $propiedad->update($request->all());
+        $inmueble->update($request->all());
 
-        return redirect()->route('propiedads.index');
+        return redirect()->route('inmuebles.index');
     }
 
     /**
@@ -92,12 +92,12 @@ class PropiedadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Propiedad $propiedad)
+    public function destroy(Inmueble $inmueble)
     {
-        abort_if(Gate::denies('propiedad_delete'), 403);
+        abort_if(Gate::denies('inmueble_delete'), 403);
 
-        $propiedad->delete();
+        $inmueble->delete();
 
-        return redirect()->route('propiedads.index')->with('success', 'El registro ha sido eliminado correctamente.');
+        return redirect()->route('inmuebles.index')->with('success', 'El registro ha sido eliminado correctamente.');
     }
 }

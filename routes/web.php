@@ -30,6 +30,8 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::resource('posts', App\Http\Controllers\PostController::class);
     Route::resource('propiedads', App\Http\Controllers\PropiedadController::class);
+    Route::resource('inmuebles', App\Http\Controllers\InmuebleController::class);
+    Route::resource('estados', App\Http\Controllers\EstadoController::class);
 
     Route::resource('permissions', App\Http\Controllers\PermissionController::class);
     Route::resource('roles', App\Http\Controllers\RoleController::class);

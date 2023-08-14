@@ -10,7 +10,6 @@ class Propiedad extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
         'categoria',
         'construccion',
         'estado',

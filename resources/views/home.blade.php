@@ -8,7 +8,7 @@
             <div class="bg-text">
                 <h2>BIENVENIDOS A</h2>
                 <h1 style="font-size:50px">BD TARE</h1>
-                <p>Ayudando a crear suseños</p>
+                <p>Ayudando a crear sueños</p>
             </div>
         </div>
     </div>
