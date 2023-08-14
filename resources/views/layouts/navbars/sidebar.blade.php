@@ -76,6 +76,15 @@
         </a>
       </li>
       @endcan
+      {{-- ESTADO PROPIEDAD --}}
+      @can('documento_index')
+      <li class="nav-item{{ $activePage == 'documentos' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('documentos.index') }}">
+          <i class="material-icons">library_books</i>
+            <p>{{ __('Tipo Documentos') }}</p>
+        </a>
+      </li>
+      @endcan
 
       {{--  --}}
       @can('post_index')

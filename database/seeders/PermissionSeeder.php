@@ -59,6 +59,12 @@ class PermissionSeeder extends Seeder
             'estado_show',
             'estado_edit',
             'estado_destroy', 
+            //
+            'documento_index',
+            'documento_create',
+            'documento_show',
+            'documento_edit',
+            'documento_destroy', 
         ];
 
         foreach ($permissions as $permission) {
