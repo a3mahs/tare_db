@@ -10,12 +10,12 @@
                         <div class="card ">
                             <!--Header-->
                             <div class="card-header card-header-primary">
-                                <h4 class="card-title">Propiedad</h4>
-                                <p class="card-category">Ingresar datos del la nueva propiedad</p>
+                                <p class="card-category">Ingresar datos</p>
                             </div>
                             <!--End header-->
                             <!--Body-->
                             <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted text-center">DATOS INMUEBLE</h6>
                                 <div class="row">
                                     <div class="container">
                                         <div class="row">
@@ -89,6 +89,13 @@
                                                     placeholder="Contactos" autocomplete="off" autofocus>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted text-center">DATOS PRPIETARIO</h6>
+                                <div class="row">
+                                    <div class="container">
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="propietario"
@@ -132,9 +139,15 @@
                                                     placeholder="Correo" autocomplete="off" autofocus>
                                             </div>
                                         </div><br>
-
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted text-center">CONTROL</h6>
+                                <div class="row">
+                                    <div class="container">
                                         <div class="row">
-                                            <label for="notas" class="col-sm-2 col-form-label">Notas</label>
+                                            <label for="notas" class="col-sm-2 col-form-label">Notas:</label>
                                             <div class="col-sm">
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item"><input type="checkbox" name="nota[]"
@@ -149,24 +162,26 @@
                                         </div>
                                         <br>
                                         <div class="row">
-                                            <label for="observacion" class="col-sm-2 col-form-label">Observación</label>
+                                            <label for="observacion" class="col-sm-2 col-form-label">Observación:</label>
                                             <div class="col-sm">
                                                 <textarea class="form-control" name="observacion" placeholder="Escribir..." autocomplete="off" autofocus></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!--End body-->
-                                <!--Footer-->
-                                <div class="card-footer ml-auto mr-auto">
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
-                                </div>
-                                <!--End footer-->
+
                             </div>
+                            <!--End body-->
+                            <!--Footer-->
+                            <div class="card-footer ml-auto mr-auto">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                            <!--End footer-->
                         </div>
-                    </form>
                 </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
 @endsection
