@@ -39,8 +39,8 @@
                                             </div>
                                             {{--  --}}
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="construccion"
-                                                    placeholder="Año" autocomplete="off" autofocus>
+                                                <input type="number" class="form-control" name="construccion"
+                                                    placeholder="Año" autocomplete="off" autofocus pattern="[0-9]{1,4}" title="Ejemplo: 2023">
                                             </div>
                                             <div class="col-sm">
                                                 <select class="form-control" name="estado">
@@ -68,25 +68,25 @@
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="barrio"
-                                                    placeholder="Barrio/Zona" autocomplete="off" autofocus>
+                                                    placeholder="Barrio/Zona" autocomplete="off" autofocus pattern="[A-Za-z]{4-16}">
                                             </div>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="estrato"
-                                                    placeholder="Estrato" autocomplete="off" autofocus>
+                                                <input type="number" class="form-control" name="estrato"
+                                                    placeholder="Estrato" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="ciudad"
-                                                    placeholder="Ciudad" autocomplete="off" autofocus>
+                                                    placeholder="Ciudad" autocomplete="off" autofocus pattern="[A-Za-z]{4-16}">
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="valor"
-                                                    placeholder="Valor" autocomplete="off" autofocus>
+                                                    placeholder="Valor" autocomplete="off" autofocus pattern="[0-9]{1-16}">
                                             </div>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="contactos"
-                                                    placeholder="Contactos" autocomplete="off" autofocus>
+                                                <input type="number" class="form-control" name="contactos"
+                                                    placeholder="Contactos" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
                                         </div>
                                     </div>
@@ -120,23 +120,24 @@
                                                 @endif
                                             </div>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="documento"
-                                                    placeholder="Número documento" autocomplete="off" autofocus>
+                                                <input type="number" class="form-control" name="documento"
+                                                    placeholder="Número documento" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
                                         </div>
                                         <div class="row">
                                             {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="contactos_propietario"
-                                                    placeholder="Contacto de propietario" autocomplete="off" autofocus>
+                                                <input type="number" class="form-control" name="contactos_propietario"
+                                                    placeholder="Contacto de propietario" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="direccion_propietario"
                                                     placeholder="Dirección de propietario" autocomplete="off" autofocus>
                                             </div>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="correo"
-                                                    placeholder="Correo" autocomplete="off" autofocus>
+                                                <input type="email" class="form-control" name="correo"
+                                                    placeholder="Correo" autocomplete="off" autofocus
+                                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                             </div>
                                         </div><br>
                                     </div>

@@ -53,7 +53,7 @@
                     <td>{{ $propiedad->estrato }}</td>
                     <td>{{ $propiedad->barrio }}</td>
                     <td>{{ $propiedad->ciudad }}</td>
-                    {{-- <td>{{ $propiedad->valor }}</td> --}}
+                    {{-- <td>{{'$'}}{{ $propiedad->valor }}</td> --}}
                     <td>{{ $propiedad->contactos }}</td>
                     {{-- <td>{{ $propiedad->propietario }}</td> --}}
                     {{-- <td>{{ $propiedad->tipo_documento }}</td> --}}
