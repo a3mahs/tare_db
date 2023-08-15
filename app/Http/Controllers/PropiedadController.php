@@ -54,6 +54,7 @@ class PropiedadController extends Controller
     public function store(Request $request)
     {
         Propiedad::create($request->all());
+        $input['nota'] = $request->input('nota');
 
         return redirect()->route('propiedads.index');
     }

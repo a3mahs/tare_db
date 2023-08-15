@@ -149,26 +149,52 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
-                                            <div class="col-sm">
-                                                <input type="text" class="form-control" name="nota"
-                                                    placeholder="Nota" value="{{ old('nota', $propiedad->nota) }}"
-                                                    autocomplete="off" autofocus>
+                                        {{-- <div class="row">
+                                            <label for="nota" class="col-sm-2 col-form-label">Lista Notas</label>
+                                            <div class="col-sm-7">
+                                                <div class="form-group">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    @foreach ($propiedad as $id => $nota)
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label">
+                                                                                    <input class="form-check-input" type="checkbox" name="nota[]"
+                                                                                        value="{{ $id }}"
+                                                                                    >
+                                                                                    <span class="form-check-sign">
+                                                                                        <span class="check"></span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            {{ $propiedad }}
+                                                                        </td>
+                                                                    </tr>
+                                                                    @endforeach
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
+                                        </div> --}}
+
+                                        <div class="row"> 
+                                            <label for="nota" class="col-sm-2 col-form-label">Lista Notas</label>                                          
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="observacion"
                                                     placeholder="Observación"
                                                     value="{{ old('observacion', $propiedad->observacion) }}"
                                                     autocomplete="off" autofocus>
+                                              
                                             </div>
 
                                         </div>
-                                        {{-- <div class="col-sm-7">
-                                            <input type="text" class="form-control" name="title"
-                                                placeholder="Ingrese el title" value="{{ old('title', $propiedad->title) }}"
-                                                autocomplete="off" autofocus>
-                                        </div> --}}
                                     </div>
                                 </div>
                             </div>

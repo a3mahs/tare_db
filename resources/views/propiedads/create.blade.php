@@ -131,15 +131,27 @@
                                                 <input type="text" class="form-control" name="correo"
                                                     placeholder="Correo" autocomplete="off" autofocus>
                                             </div>
-                                        </div>
-                                        <div class="row">                                      
+                                        </div><br>
+
+                                        <div class="row">
+                                            <label for="notas" class="col-sm-2 col-form-label">Notas</label>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="nota"
-                                                    placeholder="Nota" autocomplete="off" autofocus>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"><input type="checkbox" name="nota[]"
+                                                            value="Llamar"> Llamar</li>
+                                                    {{-- <li class="list-group-item"><input type="checkbox" name="nota[]"
+                                                            value="Se llamó"> Se llamó</li>
+                                                    <li class="list-group-item"><input type="checkbox" name="nota[]"
+                                                            value="No contesta"> No contesta</li>
+                                                    <li class="list-group-item"><input type="checkbox" name="nota[]"
+                                                            value="Llamar en otro horario"> Llamar en otro horario</li> --}}
                                             </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <label for="observacion" class="col-sm-2 col-form-label">Observación</label>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="observacion"
-                                                    placeholder="Observación" autocomplete="off" autofocus>
+                                                <textarea class="form-control" name="observacion" placeholder="Escribir..." autocomplete="off" autofocus></textarea>
                                             </div>
                                         </div>
                                     </div>

@@ -46,4 +46,20 @@ class Propiedad extends Model
     {
       return $this->belongsTo(Estado::class, 'estado_propiedad');
     }
+
+    protected $casts = [
+      'nota' => 'array'
+  ];
+
+
+  public function setNotass($value)
+  {
+      $this->attributes['nota'] = json_encode($value);
+  }
+
+  public function getNotass($value)
+  {
+      return $this->attributes['nota'] = json_decode($value);
+  }
+
 }

@@ -38,7 +38,7 @@
                   {{-- <th> Direccion Propietario </th> --}}
                   {{-- <th> Correo </th> --}}
                   <th> Nota </th>
-                  {{-- <th> Observación</th> --}}
+                  <th> Observación</th>
                   {{-- <th> Fecha de creación </th> --}}
                   <th class="text-right"> Acciones </th>
                 </thead>
@@ -61,9 +61,13 @@
                     {{-- <td>{{ $propiedad->contactos_propietario }}</td> --}}
                     {{-- <td>{{ $propiedad->direccion_propietario }}</td> --}}
                     {{-- <td>{{ $propiedad->correo }}</td> --}}
-                    <td>{{ $propiedad->nota }}</td>
-                    {{-- <td>{{ $propiedad->observacion }}</td> --}}
-                    {{-- <td class="text-primary">{{ $propiedad->created_at->toFormattedDateString() }}</td> --}}
+                    <td>
+                      @if ($propiedad->nota) @foreach($propiedad->nota as $value)
+                          {{$value}},
+                      @endforeach
+                      @endif
+                  </td>
+                    <td>{{ $propiedad->observacion }}</td>
                     <td class="td-actions text-right">
                     @can('propiedad_show')
                       <a href="{{ route('propiedads.show', $propiedad->id) }}" class="btn btn-info"> <i
