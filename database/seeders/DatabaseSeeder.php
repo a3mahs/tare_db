@@ -80,31 +80,31 @@ class DatabaseSeeder extends Seeder
 
         // CARGAR TIPO DE DOCUMENTOS 
         \App\Models\Documento::create([
-            'tipo_documento' => 'Cédula Ciudadanía'
+            'documento_per' => 'Cédula Ciudadanía'
          ]);
 
          \App\Models\Documento::create([
-            'tipo_documento' => 'Cédula Extranjería'
+            'documento_per' => 'Cédula Extranjería'
          ]);
 
          \App\Models\Documento::create([
-            'tipo_documento' => 'NIT'
+            'documento_per' => 'NIT'
          ]);
 
          \App\Models\Documento::create([
-            'tipo_documento' => 'Pasaporte'
+            'documento_per' => 'Pasaporte'
          ]);
 
          \App\Models\Documento::create([
-            'tipo_documento' => 'Registro Civil'
+            'documento_per' => 'Registro Civil'
          ]);
 
          \App\Models\Documento::create([
-            'tipo_documento' => 'Tarjeta Extranjería'
+            'documento_per' => 'Tarjeta Extranjería'
          ]);
 
          \App\Models\Documento::create([
-            'tipo_documento' => 'Tarjeta Identidad'
+            'documento_per' => 'Tarjeta Identidad'
          ]);
 
         // CARGAR ESTADOS DE PRPIEDAD
