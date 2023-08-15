@@ -20,7 +20,7 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="tipo_documento"
+                                                <input type="text" class="form-control" name="documento_per"
                                                     placeholder="Tipo Documento" autocomplete="off" autofocus>
                                             </div>
                                         </div>

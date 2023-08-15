@@ -20,8 +20,8 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="tipo_documento"
-                                                    placeholder="Tipo documento" value="{{ old('tipo_documento', $documento->tipo_documento) }}" autocomplete="off" autofocus>
+                                                <input type="text" class="form-control" name="documento_per"
+                                                    placeholder="Tipo documento" value="{{ old('documento_per', $documento->documento_per) }}" autocomplete="off" autofocus>
                                             </div>
                 
                                         </div>

@@ -6,6 +6,9 @@ use App\Models\Propiedad;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use App\Models\Inmueble;
+use App\Models\Documento;
+use App\Models\Estado;
+
 
 class PropiedadController extends Controller
 {
@@ -20,7 +23,10 @@ class PropiedadController extends Controller
 
         $propiedads = Propiedad::paginate(5);
         $inmuebles = Inmueble::All('categoria_inmueble');
-        return view('propiedads.index', compact('propiedads', 'inmuebles'));
+        $documentos = Documento::All('documento_per');
+        $estados = Estado::All('estado_propiedad');
+
+        return view('propiedads.index', compact('propiedads', 'inmuebles', 'documentos', 'estados'));
     }
 
     /**
@@ -33,8 +39,10 @@ class PropiedadController extends Controller
         abort_if(Gate::denies('propiedad_create'), 403);
 
         $inmuebles = Inmueble::All('id', 'categoria_inmueble');
+        $documentos = Documento::All('id', 'documento_per');
+        $estados = Estado::All('id', 'estado_propiedad');
 
-        return view('propiedads.create', compact('inmuebles'));
+        return view('propiedads.create', compact('inmuebles', 'documentos', 'estados'));
     }
 
     /**
@@ -60,8 +68,10 @@ class PropiedadController extends Controller
     {
         abort_if(Gate::denies('propiedad_show'), 403);
         $inmuebles = Inmueble::All('id', 'categoria_inmueble');
+        $documentos = Documento::All('id', 'documento_per');
+        $estados = Estado::All('id', 'estado_propiedad');
 
-        return view('propiedads.show', compact('propiedad', 'inmuebles'));
+        return view('propiedads.show', compact('propiedad', 'inmuebles', 'documentos', 'estados'));
     }
 
     /**
@@ -74,8 +84,10 @@ class PropiedadController extends Controller
     {
         abort_if(Gate::denies('propiedad_edit'), 403);
         $inmuebles = Inmueble::All('id', 'categoria_inmueble');
+        $documentos = Documento::All('id', 'documento_per');
+        $estados = Estado::All('id', 'estado_propiedad');
 
-        return view('propiedads.edit', compact('propiedad', 'inmuebles'));
+        return view('propiedads.edit', compact('propiedad', 'inmuebles', 'documentos', 'estados'));
     }
 
     /**

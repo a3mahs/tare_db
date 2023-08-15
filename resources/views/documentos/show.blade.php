@@ -32,7 +32,7 @@
                         </a>
                         <p class="description">
                           {{ _('ID Documento:') }} {{ $documento->id }} <br>
-                          {{ _('Tipo Documento:') }} {{ $documento->tipo_documento }} <br>
+                          {{ _('Tipo Documento:') }} {{ $documento->documento_per }} <br>
                           {{ $documento->created_at }}
                         </p>
                       </div>

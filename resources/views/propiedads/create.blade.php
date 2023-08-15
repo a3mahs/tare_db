@@ -19,57 +19,63 @@
                                 <div class="row">
                                     <div class="container">
                                         <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
-                                            {{-- <div class="col-sm">
-                                                <input type="text" class="form-control" name="categoria"
-                                                    placeholder="Categoria" autocomplete="off" autofocus>
-                                            </div> --}}
-                                                <div class="col-sm">
-                                                    <select class="form-control" name="categoria">
-                                                        <option value="">Seleccione la categoria</option>
-                                                        @foreach ($inmuebles as $inmueble)
-                                                          @if($inmueble['id'] == old('categoria') )
-                                                            <option value="{{ $inmueble['id'] }}" selected>{{ $inmueble['categoria_inmueble'] }}</option>
-                                                          @else
-                                                            <option value="{{ $inmueble['id'] }}">{{ $inmueble['categoria_inmueble'] }}</option>
-                                                          @endif  
-                                                        @endforeach
-                                                    </select>
-            
-                                                    @if ($errors->has('categoria'))
-                                                      <span class="error text-danger" for="input-categoria">{{ $errors->first('categoria') }}</span>
-                                                    @endif
-                                                </div>
-            
+                                            <div class="col-sm">
+                                                <select class="form-control" name="categoria">
+                                                    <option value="">Seleccione la categoria</option>
+                                                    @foreach ($inmuebles as $inmueble)
+                                                        @if ($inmueble['id'] == old('categoria'))
+                                                            <option value="{{ $inmueble['id'] }}" selected>
+                                                                {{ $inmueble['categoria_inmueble'] }}</option>
+                                                        @else
+                                                            <option value="{{ $inmueble['id'] }}">
+                                                                {{ $inmueble['categoria_inmueble'] }}</option>
+                                                        @endif
+                                                    @endforeach
+                                                </select>
+                                                @if ($errors->has('categoria'))
+                                                    <span class="error text-danger"
+                                                        for="input-categoria">{{ $errors->first('categoria') }}</span>
+                                                @endif
+                                            </div>
                                             {{--  --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="construccion"
                                                     placeholder="Año" autocomplete="off" autofocus>
                                             </div>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="estado"
-                                                    placeholder="Estado" autocomplete="off" autofocus>
+                                                <select class="form-control" name="estado">
+                                                    <option value="">Seleccione estado</option>
+                                                    @foreach ($estados as $estado)
+                                                        @if ($estado['id'] == old('estado'))
+                                                            <option value="{{ $estado['id'] }}" selected>
+                                                                {{ $estado['estado_propiedad'] }}</option>
+                                                        @else
+                                                            <option value="{{ $estado['id'] }}">
+                                                                {{ $estado['estado_propiedad'] }}</option>
+                                                        @endif
+                                                    @endforeach
+                                                </select>
+                                                @if ($errors->has('estado'))
+                                                    <span class="error text-danger"
+                                                        for="input-estado">{{ $errors->first('estado') }}</span>
+                                                @endif
                                             </div>
                                         </div>
-
                                         <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="direccion"
                                                     placeholder="Dirección" autocomplete="off" autofocus>
                                             </div>
                                             <div class="col-sm">
-                                              <input type="text" class="form-control" name="barrio"
-                                                  placeholder="Barrio/Zona" autocomplete="off" autofocus>
-                                          </div>
+                                                <input type="text" class="form-control" name="barrio"
+                                                    placeholder="Barrio/Zona" autocomplete="off" autofocus>
+                                            </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="estrato"
                                                     placeholder="Estrato" autocomplete="off" autofocus>
-                                            </div> 
+                                            </div>
                                         </div>
-
                                         <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="ciudad"
                                                     placeholder="Ciudad" autocomplete="off" autofocus>
@@ -83,23 +89,34 @@
                                                     placeholder="Contactos" autocomplete="off" autofocus>
                                             </div>
                                         </div>
-
                                         <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="propietario"
                                                     placeholder="Propietario" autocomplete="off" autofocus>
                                             </div>
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="tipo_documento"
-                                                    placeholder="Tipo documento" autocomplete="off" autofocus>
+                                                <select class="form-control" name="tipo_documento">
+                                                    <option value="">Seleccione tipo documento</option>
+                                                    @foreach ($documentos as $documento)
+                                                        @if ($documento['id'] == old('tipo_documento'))
+                                                            <option value="{{ $documento['id'] }}" selected>
+                                                                {{ $documento['documento_per'] }}</option>
+                                                        @else
+                                                            <option value="{{ $documento['id'] }}">
+                                                                {{ $documento['documento_per'] }}</option>
+                                                        @endif
+                                                    @endforeach
+                                                </select>
+                                                @if ($errors->has('tipo_documento'))
+                                                    <span class="error text-danger"
+                                                        for="input-tipo_documento">{{ $errors->first('tipo_documento') }}</span>
+                                                @endif
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="documento"
                                                     placeholder="Número documento" autocomplete="off" autofocus>
                                             </div>
                                         </div>
-
                                         <div class="row">
                                             {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
@@ -115,9 +132,7 @@
                                                     placeholder="Correo" autocomplete="off" autofocus>
                                             </div>
                                         </div>
-
-                                        <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
+                                        <div class="row">                                      
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="nota"
                                                     placeholder="Nota" autocomplete="off" autofocus>
@@ -126,7 +141,6 @@
                                                 <input type="text" class="form-control" name="observacion"
                                                     placeholder="Observación" autocomplete="off" autofocus>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

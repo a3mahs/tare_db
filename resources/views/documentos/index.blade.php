@@ -29,7 +29,7 @@
                   @forelse ($documentos as $documento)
                   <tr>
                     <td>{{ $documento->id }}</td>
-                    <td>{{ $documento->tipo_documento }}</td>
+                    <td>{{ $documento->documento_per }}</td>
                     <td class="td-actions text-right">
                     @can('documento_show')
                       <a href="{{ route('documentos.show', $documento->id) }}" class="btn btn-info"> <i

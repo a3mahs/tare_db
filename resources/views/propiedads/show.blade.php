@@ -28,8 +28,8 @@
                           <img class="avatar" src="{{ asset('/img/default-avatar.png') }}" alt="">
                           <h5 class="title mt-3">
                             {{ _('Propietario:') }} {{ $propiedad->propietario }}<br>
-                            {{ _('Tipo de documento:') }} {{ $propiedad->tipo_documento }} <br>
-                            {{ _('Número documento:') }} {{$propiedad->documento }} <br>
+                            {{ _('Tipo de documento:') }} {{ $documentos[$propiedad->tipo_documento-1]['documento_per'] }}<br>
+                            {{ _('Número documento:') }} {{ $propiedad->documento }} <br>
                             {{ _('Contacto propietario:') }} {{ $propiedad->contactos_propietario }} <br>
                             {{ _('Dirección propietario:') }} {{ $propiedad->direccion_propietario }} <br>
                             {{ _('Correo:') }} {{ $propiedad->correo }} <br>
@@ -37,14 +37,14 @@
                         </a>
                         <p class="description">
                           {{ _('ID Propiedad:') }} {{ $propiedad->id }} <br>
-                          {{ _('Tipo de propiedad:') }} {{ $propiedad->categoria }} <br>
+                          {{ _('Tipo de propiedad:') }} {{ $propiedad->inmueble->categoria_inmueble }} <br>
                           {{ _('Año:') }} {{ $propiedad->construccion }} <br>
-                          {{ _('Estado:') }} {{ $propiedad->estado }} <br>
+                          {{ _('Estado:') }} {{ $estados[$propiedad->estado-1]['estado_propiedad'] }} <br>
                           {{ _('Dirección:') }} {{ $propiedad->direccion }} <br>
                           {{ _('Estrato:') }} {{ $propiedad->estrato }} <br>
                           {{ _('Barrio:') }} {{ $propiedad->barrio }} <br>
                           {{ _('Ciudad:') }} {{ $propiedad->ciudad }} <br>
-                          {{ _('Valos:') }} {{ $propiedad->valor }} <br>
+                          {{ _('Valor:') }} {{ $propiedad->valor }} <br>
                           {{ _('Contacto:') }} {{ $propiedad->contactos }} <br>                          
                           {{ _('Nota:') }} {{ $propiedad->nota }} <br>
                           {{ _('Observaciones:') }} {{ $propiedad->observacion }} <br>

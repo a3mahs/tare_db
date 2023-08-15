@@ -46,10 +46,9 @@
                   @forelse ($propiedads as $propiedad)
                   <tr>
                     <td>{{ $propiedad->id }}</td>
-                    {{-- <td>{{ $propiedad->categoria }}</td> --}}
                     <td>{{ $inmuebles[$propiedad->categoria-1]['categoria_inmueble'] }}</td>
                     {{-- <td>{{ $propiedad->construccion }}</td> --}}
-                    <td>{{ $propiedad->estado }}</td>
+                    <td>{{ $estados[$propiedad->estado-1]['estado_propiedad'] }}</td>
                     <td>{{ $propiedad->direccion }}</td>
                     <td>{{ $propiedad->estrato }}</td>
                     <td>{{ $propiedad->barrio }}</td>
