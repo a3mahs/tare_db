@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-08-2023 a las 02:02:04
+-- Tiempo de generación: 16-08-2023 a las 17:00:35
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -39,13 +39,14 @@ CREATE TABLE `documentos` (
 --
 
 INSERT INTO `documentos` (`id`, `documento_per`, `created_at`, `updated_at`) VALUES
-(1, 'Cédula Ciudadanía', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(2, 'Cédula Extranjería', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(3, 'NIT', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(4, 'Pasaporte', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(5, 'Registro Civil', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(6, 'Tarjeta Extranjería', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(7, 'Tarjeta Identidad', '2023-08-16 04:15:19', '2023-08-16 04:15:19');
+(1, 'Cédula Ciudadanía', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(2, 'Cédula Extranjería', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(3, 'NIT', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(4, 'Pasaporte', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(5, 'Registro Civil', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(6, 'Tarjeta Extranjería', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(7, 'Tarjeta Identidad', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(8, 'Desconocido', '2023-08-16 19:59:54', '2023-08-16 19:59:54');
 
 -- --------------------------------------------------------
 
@@ -65,10 +66,11 @@ CREATE TABLE `estados` (
 --
 
 INSERT INTO `estados` (`id`, `estado_propiedad`, `created_at`, `updated_at`) VALUES
-(1, 'En Arriendo', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(2, 'En Venta', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(3, 'Arriendo - Venta', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(4, 'Permuta', '2023-08-16 04:15:19', '2023-08-16 04:15:19');
+(1, 'En Arriendo', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(2, 'En Venta', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(3, 'Arriendo - Venta', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(4, 'Permuta', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(5, 'Desconocido', '2023-08-16 19:59:54', '2023-08-16 19:59:54');
 
 -- --------------------------------------------------------
 
@@ -104,22 +106,23 @@ CREATE TABLE `inmuebles` (
 --
 
 INSERT INTO `inmuebles` (`id`, `categoria_inmueble`, `created_at`, `updated_at`) VALUES
-(1, 'Aparta-Estudio', '2023-08-16 04:15:18', '2023-08-16 04:15:18'),
-(2, 'Apartamento', '2023-08-16 04:15:18', '2023-08-16 04:15:18'),
-(3, 'Bodega', '2023-08-16 04:15:18', '2023-08-16 04:15:18'),
-(4, 'Casa', '2023-08-16 04:15:18', '2023-08-16 04:15:18'),
-(5, 'Centro Comercial', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(6, 'Consultorio', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(7, 'Edificio', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(8, 'Fábrica', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(9, 'Finca', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(10, 'Habitación', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(11, 'Hotel', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(12, 'Local', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(13, 'Lote', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(14, 'Oficina', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(15, 'Parcela', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(16, 'Parqueadero', '2023-08-16 04:15:19', '2023-08-16 04:15:19');
+(1, 'Aparta-Estudio', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(2, 'Apartamento', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(3, 'Bodega', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(4, 'Casa', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(5, 'Centro Comercial', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(6, 'Consultorio', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(7, 'Edificio', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(8, 'Fábrica', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(9, 'Finca', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(10, 'Habitación', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(11, 'Hotel', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(12, 'Local', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(13, 'Lote', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(14, 'Oficina', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(15, 'Parcela', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(16, 'Parqueadero', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(17, 'Desconocido', '2023-08-16 19:59:54', '2023-08-16 19:59:54');
 
 -- --------------------------------------------------------
 
@@ -179,11 +182,7 @@ CREATE TABLE `model_has_roles` (
 --
 
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
-(1, 'App\\Models\\User', 1),
-(2, 'App\\Models\\User', 2),
-(2, 'App\\Models\\User', 3),
-(2, 'App\\Models\\User', 4),
-(2, 'App\\Models\\User', 5);
+(1, 'App\\Models\\User', 1);
 
 -- --------------------------------------------------------
 
@@ -216,46 +215,46 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'permission_index', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(2, 'permission_create', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(3, 'permission_show', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(4, 'permission_edit', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(5, 'permission_destroy', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(6, 'role_index', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(7, 'role_create', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(8, 'role_show', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(9, 'role_edit', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(10, 'role_destroy', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(11, 'user_index', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(12, 'user_create', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(13, 'user_show', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(14, 'user_edit', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(15, 'user_destroy', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(16, 'post_index', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(17, 'post_create', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(18, 'post_show', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(19, 'post_edit', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(20, 'post_destroy', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(21, 'propiedad_index', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(22, 'propiedad_create', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(23, 'propiedad_show', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(24, 'propiedad_edit', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(25, 'propiedad_destroy', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(26, 'inmueble_index', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(27, 'inmueble_create', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(28, 'inmueble_show', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(29, 'inmueble_edit', 'web', '2023-08-16 04:15:19', '2023-08-16 04:15:19'),
-(30, 'inmueble_destroy', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(31, 'estado_index', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(32, 'estado_create', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(33, 'estado_show', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(34, 'estado_edit', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(35, 'estado_destroy', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(36, 'documento_index', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(37, 'documento_create', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(38, 'documento_show', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(39, 'documento_edit', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(40, 'documento_destroy', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20');
+(1, 'permission_index', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(2, 'permission_create', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(3, 'permission_show', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(4, 'permission_edit', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(5, 'permission_destroy', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(6, 'role_index', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(7, 'role_create', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(8, 'role_show', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(9, 'role_edit', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(10, 'role_destroy', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(11, 'user_index', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(12, 'user_create', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(13, 'user_show', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(14, 'user_edit', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(15, 'user_destroy', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(16, 'post_index', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(17, 'post_create', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(18, 'post_show', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(19, 'post_edit', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(20, 'post_destroy', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(21, 'propiedad_index', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(22, 'propiedad_create', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(23, 'propiedad_show', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(24, 'propiedad_edit', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(25, 'propiedad_destroy', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(26, 'inmueble_index', 'web', '2023-08-16 19:59:54', '2023-08-16 19:59:54'),
+(27, 'inmueble_create', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(28, 'inmueble_show', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(29, 'inmueble_edit', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(30, 'inmueble_destroy', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(31, 'estado_index', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(32, 'estado_create', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(33, 'estado_show', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(34, 'estado_edit', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(35, 'estado_destroy', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(36, 'documento_index', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(37, 'documento_create', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(38, 'documento_show', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(39, 'documento_edit', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(40, 'documento_destroy', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55');
 
 -- --------------------------------------------------------
 
@@ -280,17 +279,19 @@ CREATE TABLE `propiedads` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `categoria` bigint(20) UNSIGNED NOT NULL,
   `construccion` varchar(255) DEFAULT NULL,
-  `estado` bigint(20) UNSIGNED DEFAULT NULL,
+  `estado` bigint(20) UNSIGNED NOT NULL,
   `direccion` varchar(255) DEFAULT NULL,
   `estrato` varchar(255) DEFAULT NULL,
   `barrio` varchar(255) DEFAULT NULL,
   `ciudad` varchar(255) NOT NULL,
   `valor` varchar(255) DEFAULT NULL,
-  `contactos` varchar(255) NOT NULL,
+  `contacto1` varchar(255) NOT NULL,
+  `contacto2` varchar(255) DEFAULT NULL,
   `propietario` varchar(255) DEFAULT NULL,
-  `tipo_documento` bigint(20) UNSIGNED DEFAULT NULL,
+  `tipo_documento` bigint(20) NOT NULL,
   `documento` varchar(255) DEFAULT NULL,
-  `contactos_propietario` varchar(255) DEFAULT NULL,
+  `contacto1_propietario` varchar(255) NOT NULL,
+  `contacto2_propietario` varchar(255) DEFAULT NULL,
   `direccion_propietario` varchar(255) DEFAULT NULL,
   `correo` varchar(255) DEFAULT NULL,
   `nota` varchar(255) DEFAULT NULL,
@@ -318,9 +319,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(2, 'Agente', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20'),
-(3, 'User', 'web', '2023-08-16 04:15:20', '2023-08-16 04:15:20');
+(1, 'Admin', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(2, 'Agente', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55'),
+(3, 'User', 'web', '2023-08-16 19:59:55', '2023-08-16 19:59:55');
 
 -- --------------------------------------------------------
 
@@ -354,10 +355,15 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (14, 1),
 (15, 1),
 (16, 1),
+(16, 2),
 (17, 1),
+(17, 2),
 (18, 1),
+(18, 2),
 (19, 1),
+(19, 2),
 (20, 1),
+(20, 2),
 (21, 1),
 (21, 2),
 (22, 1),
@@ -367,23 +373,37 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (24, 1),
 (24, 2),
 (25, 1),
+(25, 2),
 (26, 1),
 (26, 2),
 (27, 1),
+(27, 2),
 (28, 1),
+(28, 2),
 (29, 1),
+(29, 2),
 (30, 1),
+(30, 2),
 (31, 1),
 (31, 2),
 (32, 1),
+(32, 2),
 (33, 1),
+(33, 2),
 (34, 1),
+(34, 2),
 (35, 1),
+(35, 2),
 (36, 1),
+(36, 2),
 (37, 1),
+(37, 2),
 (38, 1),
+(38, 2),
 (39, 1),
-(40, 1);
+(39, 2),
+(40, 1),
+(40, 2);
 
 -- --------------------------------------------------------
 
@@ -410,11 +430,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `created_at`, `updated_at`, `username`) VALUES
-(1, 'Miguel Herrera', 'miguellangelhs@gmail.com', NULL, '$2y$10$8/CIzYr.9JIj0wdHfTuj5OV6adpY8ZgEnaNVJLMZEQdnv3MRAzoKi', NULL, NULL, NULL, '2023-08-16 04:15:20', '2023-08-16 04:43:14', 'miguel'),
-(2, 'Bayron Rengifo', 'barengifo26@gmail.com', NULL, '$2y$10$/TPExsRRvtOGLJnH.XEhY.EjhI87vQxZAJPgYSQajh4jjW/Hke4se', NULL, NULL, NULL, '2023-08-16 04:41:51', '2023-08-16 04:41:51', 'bayron'),
-(3, 'Leidy López', 'Ladyloopz68@gmail.com', NULL, '$2y$10$BgmZXdXnl5jgz12nbLgxie7m62M2L1ddCEDnboAopGv.NbzxQY2Va', NULL, NULL, NULL, '2023-08-16 04:44:27', '2023-08-16 04:44:27', 'leidy'),
-(4, 'Orlando Torres', 'otorress@gmail.com', NULL, '$2y$10$pJgBDJ9lE2cnzRG1w.EMnefssmxCYWIG1PO8zaSPBV1UBJmJNyWhW', NULL, NULL, NULL, '2023-08-16 04:45:17', '2023-08-16 04:45:17', 'orlando'),
-(5, 'Pamela Girón', 'pame.gironmejia@gmail.con', NULL, '$2y$10$S9ZpgQU93cAMu.J/hbPPYumVGMTBEXjn63VYiHiX4SpmVmdeluT/m', NULL, NULL, NULL, '2023-08-16 05:01:20', '2023-08-16 05:01:20', 'pamela');
+(1, 'Miguel Herrera', 'miguellangelhs@gmail.com', NULL, '$2y$10$nbpmOVG7SQ.ZkTE23xlHFu/AilNB2wCnb6bpC0easzMnoy/qL/scu', NULL, NULL, NULL, '2023-08-16 19:59:55', '2023-08-16 19:59:55', 'miguel');
 
 --
 -- Índices para tablas volcadas
@@ -520,13 +536,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `documentos`
 --
 ALTER TABLE `documentos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `estados`
 --
 ALTER TABLE `estados`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -538,7 +554,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `inmuebles`
 --
 ALTER TABLE `inmuebles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -574,7 +590,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

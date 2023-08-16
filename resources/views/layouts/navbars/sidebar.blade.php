@@ -53,7 +53,7 @@
       @can('propiedad_index')
       <li class="nav-item{{ $activePage == 'propiedads' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('propiedads.index') }}">
-          <i class="material-icons">library_books</i>
+          <i class="material-icons">house</i>
             <p>{{ __('Propiedades') }}</p>
         </a>
       </li>
@@ -62,7 +62,7 @@
       @can('inmueble_index')
       <li class="nav-item{{ $activePage == 'inmuebles' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('inmuebles.index') }}">
-          <i class="material-icons">library_books</i>
+          <i class="material-icons">view_carousel</i>
             <p>{{ __('Categoria Inmueble') }}</p>
         </a>
       </li>
@@ -71,7 +71,7 @@
       @can('estado_index')
       <li class="nav-item{{ $activePage == 'estados' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('estados.index') }}">
-          <i class="material-icons">library_books</i>
+          <i class="material-icons">panorama_horizontal</i>
             <p>{{ __('Estado Propiedad') }}</p>
         </a>
       </li>
@@ -80,7 +80,7 @@
       @can('documento_index')
       <li class="nav-item{{ $activePage == 'documentos' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('documentos.index') }}">
-          <i class="material-icons">library_books</i>
+          <i class="material-icons">assignment_ind</i>
             <p>{{ __('Tipo Documentos') }}</p>
         </a>
       </li>

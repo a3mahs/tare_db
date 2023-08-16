@@ -16,11 +16,10 @@
                             <!--End header-->
                             <!--Body-->
                             <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted text-center">DATOS INMUEBLE</h6>
                                 <div class="row">
                                     <div class="container">
-                                        {{-- <label for="title" class="col-sm-2 col-form-label">Title</label> --}}
                                         <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <select class="form-control" name="categoria" required>
                                                     <option value="0">Tipo Inmueble</option>
@@ -41,6 +40,8 @@
                                                     value="{{ old('construccion', $propiedad->construccion) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <select class="form-control" name="estado" required>
                                                     <option value="0">Estado</option>
@@ -55,16 +56,14 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                        </div>
-
-                                        <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="direccion"
                                                     placeholder="Dirección"
                                                     value="{{ old('direccion', $propiedad->direccion) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="barrio"
                                                     placeholder="Barrio/Zona"
@@ -79,27 +78,39 @@
                                         </div>
 
                                         <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="ciudad"
                                                     placeholder="Ciudad" value="{{ old('ciudad', $propiedad->ciudad) }}"
-                                                    autocomplete="off" autofocus>
+                                                    autocomplete="off" autofocus required>
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="valor"
                                                     placeholder="Valor" value="{{ old('valor', $propiedad->valor) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="contactos"
-                                                    placeholder="Contactos"
-                                                    value="{{ old('contactos', $propiedad->contactos) }}"
+                                                <input type="text" class="form-control" name="contacto1"
+                                                    placeholder="Contacto1"
+                                                    value="{{ old('contacto1', $propiedad->contacto1) }}"
+                                                    autocomplete="off" autofocus required>
+                                            </div>
+                                            <div class="col-sm">
+                                                <input type="text" class="form-control" name="contacto2"
+                                                    placeholder="Contacto2"
+                                                    value="{{ old('contacto2', $propiedad->contacto2) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
                                         </div>
-
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted text-center">DATOS PRPIETARIO</h6>
+                                <div class="row">
+                                    <div class="container">
                                         <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="propietario"
                                                     placeholder="Propietario"
@@ -120,26 +131,27 @@
                                                     @endforeach
                                                 </select>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="documento"
                                                     placeholder="Número"
                                                     value="{{ old('documento', $propiedad->documento) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
-                                        </div>
-
-                                        <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="contacto1_propietario"
-                                                    placeholder="Contacto de propietario"
-                                                    value="{{ old('contactos_propietario', $propiedad->contactos_propietario) }}"
-                                                    autocomplete="off" autofocus>
+                                                    placeholder="Contacto1 de propietario"
+                                                    value="{{ old('contacto1_propietario', $propiedad->contacto1_propietario) }}"
+                                                    autocomplete="off" autofocus required>
                                             </div>
+
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="contacto2_propietario"
-                                                    placeholder="Contacto de propietario"
-                                                    value="{{ old('contactos_propietario', $propiedad->contactos_propietario) }}"
+                                                    placeholder="Contacto2 de propietario"
+                                                    value="{{ old('contacto2_propietario', $propiedad->contacto2_propietario) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
                                             <div class="col-sm">
@@ -148,58 +160,32 @@
                                                     value="{{ old('direccion_propietario', $propiedad->direccion_propietario) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="correo"
                                                     placeholder="Correo" value="{{ old('correo', $propiedad->correo) }}"
                                                     autocomplete="off" autofocus>
                                             </div>
-                                        </div>
-
-                                        {{-- <div class="row">
-                                            <label for="nota" class="col-sm-2 col-form-label">Lista Notas</label>
-                                            <div class="col-sm-7">
-                                                <div class="form-group">
-                                                    <div class="tab-content">
-                                                        <div class="tab-pane active">
-                                                            <table class="table">
-                                                                <tbody>
-                                                                    @foreach ($propiedad as $id => $nota)
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div class="form-check">
-                                                                                <label class="form-check-label">
-                                                                                    <input class="form-check-input" type="checkbox" name="nota[]"
-                                                                                        value="{{ $id }}"
-                                                                                    >
-                                                                                    <span class="form-check-sign">
-                                                                                        <span class="check"></span>
-                                                                                    </span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>
-                                                                            {{ $propiedad }}
-                                                                        </td>
-                                                                    </tr>
-                                                                    @endforeach
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="col-sm">
                                             </div>
-                                        </div> --}}
-
-                                        <div class="row"> 
-                                            <label for="nota" class="col-sm-2 col-form-label">Lista Notas</label>                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted text-center">OBSERVACIONES</h6>
+                                <div class="row">
+                                    <div class="container">
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="observacion"
                                                     placeholder="Observación"
                                                     value="{{ old('observacion', $propiedad->observacion) }}"
                                                     autocomplete="off" autofocus>
-                                              
                                             </div>
-
+                                            <div class="col-sm">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -207,15 +193,16 @@
                             <!--End body-->
                             <!--Footer-->
                             <div class="card-footer ml-auto mr-auto">
-                                <a href="{{ route('propiedads.index') }}" class="btn btn-sm btn-success mr-3"> Volver
+                                <a href="{{ route('propiedads.index') }}" class="btn btn-success"> Volver
                                 </a>
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
-                        <!--End footer-->
-                    </form>
                 </div>
+                <!--End footer-->
+                </form>
             </div>
         </div>
+    </div>
     </div>
 @endsection

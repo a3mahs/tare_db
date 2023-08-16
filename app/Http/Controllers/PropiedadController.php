@@ -56,6 +56,21 @@ class PropiedadController extends Controller
         Propiedad::create($request->all());
         $input['nota'] = $request->input('nota');
 
+        $request->validate([
+            'categoria' => 'required',
+            'estado' => 'required',
+            'contacto1' => 'required',
+            'tipo_documento' => 'required',
+            // 'documento' => 'required',
+            'ciudad'=> 'required',
+            'contacto1_propietario'=>'required',
+        ]);
+
+        // if ($v->fails())
+        // {
+        //     return redirect()->back()->withInput()->withErrors($v->errors());
+        // }
+
         return redirect()->route('propiedads.index');
     }
 

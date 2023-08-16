@@ -47,9 +47,7 @@
                           {{ _('Valor:') }} {{'$'}}{{ $propiedad->valor }} <br>
                           {{ _('Contacto1:') }} {{ $propiedad->contacto1 }} <br> 
                           {{ _('Contacto2:') }} {{ $propiedad->contacto2 }} <br>                         
-                          {{ _('Notas:') }} @foreach($propiedad->nota as $value)
-                                 {{$value}},
-                          @endforeach <br>
+                          {{-- {{ _('Notas:') }} @foreach($propiedad->nota as $value){{$value}}@endforeach <br> --}}
                           {{ _('Observaciones:') }} {{ $propiedad->observacion }} <br>
 
                           {{ $propiedad->created_at }}

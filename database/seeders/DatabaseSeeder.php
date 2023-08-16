@@ -77,6 +77,9 @@ class DatabaseSeeder extends Seeder
          \App\Models\Inmueble::create([
             'categoria_inmueble' => 'Parqueadero'
          ]);
+         \App\Models\Inmueble::create([
+            'categoria_inmueble' => 'Desconocido'
+         ]);
 
         // CARGAR TIPO DE DOCUMENTOS 
         \App\Models\Documento::create([
@@ -106,6 +109,9 @@ class DatabaseSeeder extends Seeder
          \App\Models\Documento::create([
             'documento_per' => 'Tarjeta Identidad'
          ]);
+         \App\Models\Documento::create([
+            'documento_per' => 'Desconocido'
+         ]);
 
         // CARGAR ESTADOS DE PRPIEDAD
         \App\Models\Estado::create([
@@ -122,6 +128,9 @@ class DatabaseSeeder extends Seeder
 
          \App\Models\Estado::create([
             'estado_propiedad' => 'Permuta'
+         ]);
+         \App\Models\Estado::create([
+            'estado_propiedad' => 'Desconocido'
          ]);
 
 

@@ -37,7 +37,7 @@
                   {{-- <th> Contactos Propietario </th> --}}
                   {{-- <th> Direccion Propietario </th> --}}
                   {{-- <th> Correo </th> --}}
-                  <th> Nota </th>
+                  {{-- <th> Nota </th> --}}
                   <th> Observación</th>
                   {{-- <th> Fecha de creación </th> --}}
                   <th class="text-right"> Acciones </th>
@@ -61,12 +61,12 @@
                     {{-- <td>{{ $propiedad->contactos_propietario }}</td> --}}
                     {{-- <td>{{ $propiedad->direccion_propietario }}</td> --}}
                     {{-- <td>{{ $propiedad->correo }}</td> --}}
-                    <td>
+                    {{-- <td>
                       @if ($propiedad->nota) @foreach($propiedad->nota as $value)
                           {{$value}},
                       @endforeach
                       @endif
-                  </td>
+                  </td> --}}
                     <td>{{ $propiedad->observacion }}</td>
                     <td class="td-actions text-right">
                     @can('propiedad_show')
