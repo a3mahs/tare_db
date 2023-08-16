@@ -45,7 +45,8 @@
                           {{ _('Barrio:') }} {{ $propiedad->barrio }} <br>
                           {{ _('Ciudad:') }} {{ $propiedad->ciudad }} <br>
                           {{ _('Valor:') }} {{'$'}}{{ $propiedad->valor }} <br>
-                          {{ _('Contacto:') }} {{ $propiedad->contactos }} <br>                         
+                          {{ _('Contacto1:') }} {{ $propiedad->contacto1 }} <br> 
+                          {{ _('Contacto2:') }} {{ $propiedad->contacto2 }} <br>                         
                           {{ _('Notas:') }} @foreach($propiedad->nota as $value)
                                  {{$value}},
                           @endforeach <br>

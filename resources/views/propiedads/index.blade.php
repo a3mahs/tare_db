@@ -7,8 +7,8 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Propiedads</h4>
-            <p class="card-category">Lista de propiedads registrados en la base de datos</p>
+            <h4 class="card-title">Inmuebles</h4>
+            <p class="card-category">Lista de inmuebles registrados en la base de datos</p>
           </div>
           <div class="card-body">
             <div class="row">
@@ -22,7 +22,7 @@
               <table class="table ">
                 <thead class="text-primary">
                   <th> ID </th>
-                  <th> Categoria </th>
+                  <th> Inmueble </th>
                   {{-- <th> Año de Construcción </th> --}}
                   <th> Estado </th>
                   <th> Dirección </th>
@@ -30,7 +30,7 @@
                   <th> Barrio </th>
                   <th> Ciudad </th>
                   {{-- <th> Valor </th> --}}
-                  <th> Contactos </th>
+                  <th> Contacto1 </th>
                   {{-- <th> Propietario </th> --}}
                   {{-- <th> Tipo Documento </th> --}}
                   {{-- <th> Numero </th> --}}
@@ -54,7 +54,7 @@
                     <td>{{ $propiedad->barrio }}</td>
                     <td>{{ $propiedad->ciudad }}</td>
                     {{-- <td>{{'$'}}{{ $propiedad->valor }}</td> --}}
-                    <td>{{ $propiedad->contactos }}</td>
+                    <td>{{ $propiedad->contacto1 }}</td>
                     {{-- <td>{{ $propiedad->propietario }}</td> --}}
                     {{-- <td>{{ $propiedad->tipo_documento }}</td> --}}
                     {{-- <td>{{ $propiedad->documento }}</td> --}}

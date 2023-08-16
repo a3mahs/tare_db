@@ -21,7 +21,7 @@
                                         <div class="row">
                                             <div class="col-sm">
                                                 <select class="form-control" name="categoria">
-                                                    <option value="">Seleccione la categoria</option>
+                                                    <option value="">Tipo Inmueble</option>
                                                     @foreach ($inmuebles as $inmueble)
                                                         @if ($inmueble['id'] == old('categoria'))
                                                             <option value="{{ $inmueble['id'] }}" selected>
@@ -42,9 +42,12 @@
                                                 <input type="number" class="form-control" name="construccion"
                                                     placeholder="Año" autocomplete="off" autofocus pattern="[0-9]{1,4}" title="Ejemplo: 2023">
                                             </div>
+                                       
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <select class="form-control" name="estado">
-                                                    <option value="">Seleccione estado</option>
+                                                    <option value="">Estado</option>
                                                     @foreach ($estados as $estado)
                                                         @if ($estado['id'] == old('estado'))
                                                             <option value="{{ $estado['id'] }}" selected>
@@ -60,12 +63,14 @@
                                                         for="input-estado">{{ $errors->first('estado') }}</span>
                                                 @endif
                                             </div>
-                                        </div>
-                                        <div class="row">
+
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="direccion"
                                                     placeholder="Dirección" autocomplete="off" autofocus>
                                             </div>
+                                        </div>
+                                  
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="barrio"
                                                     placeholder="Barrio/Zona" autocomplete="off" autofocus pattern="[A-Za-z]{4-16}">
@@ -84,9 +89,15 @@
                                                 <input type="text" class="form-control" name="valor"
                                                     placeholder="Valor" autocomplete="off" autofocus pattern="[0-9]{1-16}">
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="contactos"
-                                                    placeholder="Contactos" autocomplete="off" autofocus pattern="[0-9]{10}">
+                                                    placeholder="Contacto1" autocomplete="off" autofocus pattern="[0-9]{10}">
+                                            </div>
+                                            <div class="col-sm">
+                                                <input type="number" class="form-control" name="contactos"
+                                                    placeholder="Contacto2" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
                                         </div>
                                     </div>
@@ -103,7 +114,7 @@
                                             </div>
                                             <div class="col-sm">
                                                 <select class="form-control" name="tipo_documento">
-                                                    <option value="">Seleccione tipo documento</option>
+                                                    <option value="">Tipo de Docunento</option>
                                                     @foreach ($documentos as $documento)
                                                         @if ($documento['id'] == old('tipo_documento'))
                                                             <option value="{{ $documento['id'] }}" selected>
@@ -119,30 +130,42 @@
                                                         for="input-tipo_documento">{{ $errors->first('tipo_documento') }}</span>
                                                 @endif
                                             </div>
+                                           
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="documento"
                                                     placeholder="Número documento" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
-                                                <input type="number" class="form-control" name="contactos_propietario"
+                                                <input type="number" class="form-control" name="contacto1_propietario"
+                                                    placeholder="Contacto de propietario" autocomplete="off" autofocus pattern="[0-9]{10}">
+                                            </div> 
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <input type="number" class="form-control" name="contacto2_propietario"
                                                     placeholder="Contacto de propietario" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="direccion_propietario"
                                                     placeholder="Dirección de propietario" autocomplete="off" autofocus>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-sm">
                                                 <input type="email" class="form-control" name="correo"
                                                     placeholder="Correo" autocomplete="off" autofocus
                                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                             </div>
-                                        </div><br>
+                                            <div class="col-sm">
+                                                
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted text-center">CONTROL</h6>
                                 <div class="row">
@@ -153,24 +176,13 @@
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item"><input type="checkbox" name="nota[]"
                                                             value="Llamar"> Llamar</li>
-                                                    {{-- <li class="list-group-item"><input type="checkbox" name="nota[]"
-                                                            value="Se llamó"> Se llamó</li>
-                                                    <li class="list-group-item"><input type="checkbox" name="nota[]"
-                                                            value="No contesta"> No contesta</li>
-                                                    <li class="list-group-item"><input type="checkbox" name="nota[]"
-                                                            value="Llamar en otro horario"> Llamar en otro horario</li> --}}
                                             </div>
-                                        </div>
-                                        <br>
-                                        <div class="row">
-                                            <label for="observacion" class="col-sm-2 col-form-label">Observación:</label>
                                             <div class="col-sm">
-                                                <textarea class="form-control" name="observacion" placeholder="Escribir..." autocomplete="off" autofocus></textarea>
+                                                <textarea class="form-control" name="observacion" placeholder="Observación..." autocomplete="off" autofocus></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!--End body-->
                             <!--Footer-->

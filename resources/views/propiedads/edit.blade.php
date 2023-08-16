@@ -23,7 +23,7 @@
                                             {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
                                                 <select class="form-control" name="categoria" required>
-                                                    <option value="0">Seleccione categoria</option>
+                                                    <option value="0">Tipo Inmueble</option>
                                                     @foreach ($inmuebles as $inmueble)
                                                         @if ($propiedad->categoria == $inmueble['id'])
                                                             <option value="{{ $inmueble['id'] }}" selected>
@@ -43,7 +43,7 @@
                                             </div>
                                             <div class="col-sm">
                                                 <select class="form-control" name="estado" required>
-                                                    <option value="0">Seleccione el estado</option>
+                                                    <option value="0">Estado</option>
                                                     @foreach ($estados as $estado)
                                                         @if ($propiedad->estado == $estado['id'])
                                                             <option value="{{ $estado['id'] }}" selected>
@@ -108,7 +108,7 @@
                                             </div>
                                             <div class="col-sm">
                                                 <select class="form-control" name="tipo_documento" required>
-                                                    <option value="0">Seleccione el estado</option>
+                                                    <option value="0">Tipo de Documento</option>
                                                     @foreach ($documentos as $documento)
                                                         @if ($propiedad->tipo_documento == $documento['id'])
                                                             <option value="{{ $documento['id'] }}" selected>
@@ -131,7 +131,13 @@
                                         <div class="row">
                                             {{-- <label for="title" class="col-sm-2 col-form-label">Post title</label> --}}
                                             <div class="col-sm">
-                                                <input type="text" class="form-control" name="contactos_propietario"
+                                                <input type="text" class="form-control" name="contacto1_propietario"
+                                                    placeholder="Contacto de propietario"
+                                                    value="{{ old('contactos_propietario', $propiedad->contactos_propietario) }}"
+                                                    autocomplete="off" autofocus>
+                                            </div>
+                                            <div class="col-sm">
+                                                <input type="text" class="form-control" name="contacto2_propietario"
                                                     placeholder="Contacto de propietario"
                                                     value="{{ old('contactos_propietario', $propiedad->contactos_propietario) }}"
                                                     autocomplete="off" autofocus>

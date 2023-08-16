@@ -23,11 +23,13 @@ class CreatePropiedadsTable extends Migration
             $table->string('barrio')->nullable();
             $table->string('ciudad');
             $table->string('valor')->nullable();
-            $table->string('contactos');
+            $table->string('contacto1');
+            $table->string('contacto2');
             $table->string('propietario')->nullable();
             $table->bigInteger('tipo_documento')->unsigned()->nullable();
             $table->string('documento')->nullable();
-            $table->string('contactos_propietario')->nullable();
+            $table->string('contacto1_propietario')->nullable();
+            $table->string('contacto1_propietario')->nullable();
             $table->string('direccion_propietario')->nullable();
             $table->string('correo')->nullable();
             $table->string('nota')->nullable();
