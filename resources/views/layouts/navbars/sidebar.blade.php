@@ -5,7 +5,7 @@
       Tip 2: you can also add an image using data-image tag
   -->
   <div class="logo">
-    <a href="https://www.aaarealestate.com.co" class="simple-text logo-normal">
+    <a href="{{ route('home') }}" class="simple-text logo-normal">
       {{ __('TARE') }}
     </a>
   </div>
