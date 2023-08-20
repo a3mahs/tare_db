@@ -94,7 +94,7 @@ class EstadoController extends Controller
      */
     public function destroy(Estado $estado)
     {
-        abort_if(Gate::denies('estado_delete'), 403);
+        abort_if(Gate::denies('estado_destroy'), 403);
 
         $estado->delete();
 

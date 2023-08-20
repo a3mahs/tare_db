@@ -27,7 +27,7 @@
 
     .bg-image {
         /* The image used */
-        background-image: url("https://www.orienteraiz.co/blog/wp-content/uploads/2014/04/invertir-propiedad-raiz-colombia.jpg");
+        background-image: url("https://client-setting-co-institucional-images.s3.amazonaws.com/large_invertir_en_el_sector_inmobiliario_bfae43dea9.jpg");
 
         /* Add the blur effect */
         filter: blur(8px);

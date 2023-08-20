@@ -92,9 +92,9 @@ class DocumentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dcumento $documento)
+    public function destroy(Documento $documento)
     {
-        abort_if(Gate::denies('documento_delete'), 403);
+        abort_if(Gate::denies('documento_destroy'), 403);
 
         $documento->delete();
 

@@ -94,7 +94,7 @@ class InmuebleController extends Controller
      */
     public function destroy(Inmueble $inmueble)
     {
-        abort_if(Gate::denies('inmueble_delete'), 403);
+        abort_if(Gate::denies('inmueble_destroy'), 403);
 
         $inmueble->delete();
 

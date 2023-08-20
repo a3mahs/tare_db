@@ -128,7 +128,7 @@ class PropiedadController extends Controller
      */
     public function destroy(Propiedad $propiedad)
     {
-        abort_if(Gate::denies('propiedad_delete'), 403);
+        abort_if(Gate::denies('propiedad_destroy'), 403);
 
         $propiedad->delete();
 

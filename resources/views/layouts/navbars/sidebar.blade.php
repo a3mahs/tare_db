@@ -54,7 +54,7 @@
       <li class="nav-item{{ $activePage == 'propiedads' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('propiedads.index') }}">
           <i class="material-icons">house</i>
-            <p>{{ __('Propiedades') }}</p>
+            <p>{{ __('Inmuebles') }}</p>
         </a>
       </li>
       @endcan
