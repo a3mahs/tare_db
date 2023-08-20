@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'propiedads', 'titlePage' => 'Propiedads'])
+@extends('layouts.main', ['activePage' => 'propiedads', 'titlePage' => 'Inmuebles'])
 
 @section('content')
 <div class="content">
