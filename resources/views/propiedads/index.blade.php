@@ -29,8 +29,8 @@
                                 <div class="col-sm ">
                                     <form action="{{ route('propiedads.index') }}" method="get" class="form-inline">
                                         <div class="input-group no-border">
-                                            <input name="texto" class="form-control mr-sm-2" type="texto"
-                                                placeholder="Buscar dato" value="{{ $texto }}" aria-label="Search">
+                                            <input name="texto" class="form-control mr-sm-3" type="texto"
+                                                placeholder="Buscar Teléfono" value="{{ $texto }}" aria-label="Search">
                                             <button type="submit" class="btn btn-white btn-round btn-just-icon">
                                                 <i class="material-icons">search</i>
                                                 <div class="ripple-container"></div>

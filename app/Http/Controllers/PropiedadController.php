@@ -34,21 +34,6 @@ class PropiedadController extends Controller
 
         return view('propiedads.index', compact('propiedads', 'inmuebles', 'documentos', 'estados', 'texto'));
     }
-
-    // public function index(Request $request)
-    // {
-    //     abort_if(Gate::denies('propiedad_index'), 403);
-    //     $contactos = $request->get('buscarpor');
-    //     $buscarContacto = Propiedad::where('contacto1','like',"%$contactos%")->paginate(5);
-
-    //     $propiedads = Propiedad::paginate(5);
-    //     $inmuebles = Inmueble::All('categoria_inmueble');
-    //     $documentos = Documento::All('documento_per');
-    //     $estados = Estado::All('estado_propiedad');
-
-    //     return view('propiedads.index', compact('propiedads', 'buscarContacto', 'inmuebles', 'documentos', 'estados'));
-    // }
-
     /**
      * Show the form for creating a new resource.
      *
