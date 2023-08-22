@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted text-center">DATOS PRPIETARIO</h6>
+                                <h6 class="card-subtitle mb-2 text-muted text-center">DATOS PROPIETARIO</h6>
                                 <div class="row">
                                     <div class="container">
                                         <div class="row">
@@ -121,7 +121,7 @@
                                             </div>
                                             <div class="col-sm">
                                                 <select class="form-control" name="tipo_documento" required>
-                                                    <option value="">Tipo de Docunento</option>
+                                                    <option value="">Tipo de Documento</option>
                                                     @foreach ($documentos as $documento)
                                                         @if ($documento['id'] == old('tipo_documento'))
                                                             <option value="{{ $documento['id'] }}" selected>
