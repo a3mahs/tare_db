@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'propiedads', 'titlePage' => 'Nueva Propiedad'])
+@extends('layouts.main', ['activePage' => 'propiedads', 'titlePage' => 'Nuevo Inmueble'])
 
 @section('content')
     <div class="content">
@@ -17,6 +17,15 @@
                             <!--Body-->
 
                             <div class="card-body">
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <div class="li">{{$error}}</div>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                                 <h6 class="card-subtitle mb-2 text-muted text-center">DATOS INMUEBLE</h6>
                                 <div class="row">
                                     <div class="container">
@@ -42,7 +51,7 @@
                                             {{--  --}}
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="construccion"
-                                                    placeholder="Año" autocomplete="off" autofocus pattern="[0-9]{1,4}"
+                                                    placeholder="Año" autocomplete="off" value="{{old('construccion')}}" autofocus pattern="[0-9]{1,4}"
                                                     title="Ejemplo: 2023">
                                             </div>
 
@@ -69,41 +78,41 @@
 
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="direccion"
-                                                    placeholder="Dirección" autocomplete="off" autofocus>
+                                                    placeholder="Dirección" value="{{old('direccion')}}" autocomplete="off" autofocus>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="barrio"
-                                                    placeholder="Barrio/Zona" autocomplete="off" autofocus
+                                                    placeholder="Barrio/Zona" value="{{old('barrio')}}" autocomplete="off" autofocus
                                                     pattern="[A-Za-z]{4-16}">
                                             </div>
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="estrato"
-                                                    placeholder="Estrato" autocomplete="off" autofocus pattern="[0-9]{10}">
+                                                    placeholder="Estrato" value="{{old('estrato')}}" autocomplete="off" autofocus pattern="[0-9]{10}">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="ciudad"
-                                                    placeholder="Ciudad" autocomplete="off" autofocus
+                                                    placeholder="Ciudad" autocomplete="off" value="{{old('ciudad')}}" autofocus
                                                     pattern="[A-Za-z]{4-16}" required>
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="valor"
-                                                    placeholder="Valor" autocomplete="off" autofocus pattern="[0-9]{1-16}">
+                                                    placeholder="Valor" value="{{old('valor')}}" autocomplete="off" autofocus pattern="[0-9]{1-16}">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="contacto1"
-                                                    placeholder="Contacto1" autocomplete="off" autofocus pattern="[0-9]{10}"
+                                                    placeholder="Contacto1" value="{{old('contacto1')}}" autocomplete="off" autofocus pattern="[0-9]{10}"
                                                     required>
                                             </div>
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="contacto2"
-                                                    placeholder="Contacto2" autocomplete="off" autofocus
+                                                    placeholder="Contacto2" autocomplete="off" value="{{old('contacto2')}}" autofocus
                                                     pattern="[0-9]{10}">
                                             </div>
                                         </div>
@@ -117,7 +126,7 @@
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="propietario"
-                                                    placeholder="Propietario" autocomplete="off" autofocus>
+                                                    placeholder="Propietario" value="{{old('propietario')}}" autocomplete="off" autofocus>
                                             </div>
                                             <div class="col-sm">
                                                 <select class="form-control" name="tipo_documento" required>
@@ -142,30 +151,30 @@
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="documento"
-                                                    placeholder="Número documento" autocomplete="off" autofocus
+                                                    placeholder="Número documento" value="{{old('documento')}}" autocomplete="off" autofocus
                                                     pattern="[0-9]{10}">
                                             </div>
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="contacto1_propietario"
-                                                    placeholder="Contacto1 de propietario" autocomplete="off" autofocus
+                                                    placeholder="Contacto1 de propietario" value="{{old('contacto1_propietario')}}" autocomplete="off" autofocus
                                                     pattern="[0-9]{10}" required>
                                             </div>
                                         </div><br>
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="number" class="form-control" name="contacto2_propietario"
-                                                    placeholder="Contacto2 de propietario" autocomplete="off" autofocus
+                                                    placeholder="Contacto2 de propietario" value="{{old('contacto2_propietario')}}" autocomplete="off" autofocus
                                                     pattern="[0-9]{10}">
                                             </div>
                                             <div class="col-sm">
                                                 <input type="text" class="form-control" name="direccion_propietario"
-                                                    placeholder="Dirección de propietario" autocomplete="off" autofocus>
+                                                    placeholder="Dirección de propietario" value="{{old('direccion_propietario')}}" autocomplete="off" autofocus>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm">
                                                 <input type="email" class="form-control" name="correo"
-                                                    placeholder="Correo" autocomplete="off" autofocus
+                                                    placeholder="Correo" autocomplete="off" value="{{old('correo')}}" autofocus
                                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                             </div>
                                             <div class="col-sm">
@@ -187,7 +196,7 @@
                                                             value="Llamar"> Llamar</li>
                                             </div> --}}
                                             <div class="col-sm">
-                                                <textarea class="form-control" name="observacion" placeholder="Observación..." autocomplete="off" autofocus></textarea>
+                                                <textarea class="form-control" name="observacion" value="{{old('observacion')}}" placeholder="Observación..." autocomplete="off" autofocus></textarea>
                                             </div>
                                             <div class="col-sm">
                                             </div>

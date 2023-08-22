@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Propiedad;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
-use App\Models\Inmueble;
 use App\Models\Documento;
 use App\Models\Estado;
-
+use App\Models\Inmueble;
+use App\Models\Propiedad;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class PropiedadController extends Controller
 {
@@ -17,16 +17,22 @@ class PropiedadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         abort_if(Gate::denies('propiedad_index'), 403);
-
-        $propiedads = Propiedad::paginate(5);
+        $texto = trim($request->get('texto'));
+        $propiedads = DB::table('propiedads')
+            ->select('id', 'categoria', 'estado', 'direccion', 'estrato', 'barrio', 'ciudad', 'contacto1', 'observacion')
+            ->where('contacto1', 'LIKE', '%'.$texto.'%')
+            ->orWhere('contacto1', 'LIKE', '%'.$texto.'%')
+            ->orderBy('contacto1', 'asc')
+            ->paginate(10);
+        // $propiedads = Propiedad::paginate(5);
         $inmuebles = Inmueble::All('categoria_inmueble');
         $documentos = Documento::All('documento_per');
         $estados = Estado::All('estado_propiedad');
 
-        return view('propiedads.index', compact('propiedads', 'inmuebles', 'documentos', 'estados'));
+        return view('propiedads.index', compact('propiedads', 'inmuebles', 'documentos', 'estados', 'texto'));
     }
 
     // public function index(Request $request)
@@ -39,7 +45,6 @@ class PropiedadController extends Controller
     //     $inmuebles = Inmueble::All('categoria_inmueble');
     //     $documentos = Documento::All('documento_per');
     //     $estados = Estado::All('estado_propiedad');
-      
 
     //     return view('propiedads.index', compact('propiedads', 'buscarContacto', 'inmuebles', 'documentos', 'estados'));
     // }
@@ -74,11 +79,13 @@ class PropiedadController extends Controller
         $request->validate([
             'categoria' => 'required',
             'estado' => 'required',
-            'contacto1' => 'required',
+            'contacto1' => 'required|unique:propiedads',
+            'contacto2' => 'unique:propiedads',
             'tipo_documento' => 'required',
-            // 'documento' => 'required',
-            'ciudad'=> 'required',
-            'contacto1_propietario'=>'required',
+            'documento' => 'unique:propiedads',
+            'ciudad' => 'required',
+            'contacto1_propietario' => 'required',
+            'correo' => 'required|unique:propiedads',
         ]);
 
         // if ($v->fails())
