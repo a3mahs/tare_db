@@ -25,7 +25,7 @@ class PropiedadController extends Controller
             ->select('id', 'categoria', 'estado', 'direccion', 'estrato', 'barrio', 'ciudad', 'contacto1', 'observacion')
             ->where('contacto1', 'LIKE', '%'.$texto.'%')
             ->orWhere('contacto1', 'LIKE', '%'.$texto.'%')
-            ->orderBy('contacto1', 'asc')
+            // ->orderBy('contacto1', 'asc')
             ->paginate(10);
         // $propiedads = Propiedad::paginate(5);
         $inmuebles = Inmueble::All('categoria_inmueble');
