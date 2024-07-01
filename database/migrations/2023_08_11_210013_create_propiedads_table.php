@@ -23,7 +23,7 @@ class CreatePropiedadsTable extends Migration
             $table->string('barrio')->nullable();
             $table->string('ciudad');
             $table->string('valor')->nullable();
-            $table->string('contacto1');
+            $table->string('contacto1')->unique();
             $table->string('contacto2')->nullable();
             $table->string('propietario')->nullable();
             $table->bigInteger('tipo_documento');
